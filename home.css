@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    height: 80px;
+    width: 75%;
+    border: 1px solid grey;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 18px;
+    border-radius: 30px;
+    font-size: 20px;
+}
+nav #nav-option{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+#nav-option a{
+    text-decoration: none;
+    color: #000;
+}
+#search-box{
+    display: flex;
+    width: 360px;
+    height: 42px;
+    border-radius: 25px;
+}
+#search-box input{
+    border-radius: 25px;
+    border: 1px solid lightgrey;
+    outline: none;
+    font-size: 16px;
+    padding: 20px;
+}
+
+#search_logo{
+    position: relative;
+    right: 30px;
+    align-items: center;
+}
+#search-box #search_logo{
+    height: 42px;
+    width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    border-radius:0 25px 25px 0px;
+    font-size:18px;
+    color: #fff;
+
+}
+nav #logo>h1{
+    font-size: 30px;
+    font-weight: 700;
+}
+nav #logo>h1::first-letter{
+    color: orangered;
+    font-size: 35px;
+}
+a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: blue;
+    transition: width 0.5s ease;
+}
+a:hover::after{
+    width: 100%;
+}
+#nav-option a:hover{
+    color: blue;
+}
+#search-box input:focus-within{
+    box-shadow: 0px 0px 10px rgb(108,101,185);
+}
+#cart:hover{
+    transition: all 0.3s linear;
+    color: blue;
+}
+#card{
+    height: 380px;
+    width: 340px;
+    background-color: rgb(197, 184, 184);
+    border-radius: 22px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+#card:hover{
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+#image{
+    background-color: #e2c2be;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#product-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+#product-container:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;;
+}
+#product-container main{
+    height: 360px;
+    width: 320px;
+    background-color: aliceblue;
+    margin-top: 10px;
+    border-radius: 18px;
+}
+#product-container>main img{
+    transition:all 3s linear;
+    height: 200px;
+    width: 260px;
+    border-radius: 12px;
+}
+img:hover{
+    transform: scale(1.2);
+    
+}
+
+#content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#content2{
+    display: flex;
+    justify-content: space-between;
+    align-items: cen;
+    flex-wrap: wrap;
+    padding: 8px;
+    margin-bottom: 10px;    
+}
+h3{
+    margin-bottom: 18px;
+    text-align: center;
+    font-size: 16px;
+}
+p{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 10px;
+    padding: 12px;
+}
+h4{
+    width: 90px;
+    height: 30px;
+    padding: 8px;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    background-color: rgb(67, 197, 67); 
+    color: #fff;
+    border-radius: 12px;
+    text-align: center;
+}
+button{
+    /* height: 28px;
+    width: 60px; */
+    height: 28px;
+    border-radius: 12px;
+    margin-left:10px ;
+    padding: 4px;
+    background-color: blue;
+    color: #fff;
+    text-align: center;
+    border: none;
+}
+
+#groups{
+    height: 35px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* background-color: red; */
+    display: none;
+}
+#hamburger{
+    display: none;
+}
+#groups span{
+    display: block;
+    height: 3px;
+    width: 40px;
+    background-color: black;
+}
+@media (max-width:750px){
+    #nav-option div,#search-box,#cart{
+        display: none;
+    }
+    #groups{
+        display: flex;
+    }
+    #hamburger:checked~ #nav-option div,
+    #hamburger:checked~ #search-box,
+    #hamburger:checked~ #cart{
+        display: flex;
+    }
+    nav{
+        width: 90%;
+        height: auto;
+        padding: 15px 30px 0px 30px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    #nav-option{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    #search-box{
+       margin-left: 200px;
+    }
+    #search-box input{
+        width: 85%;
+        font-size: 16px;
+    }
+    #cart{
+       width: 100%;
+       padding-left: 240px;
+    }
+}
